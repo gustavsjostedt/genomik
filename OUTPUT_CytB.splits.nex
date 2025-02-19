@@ -1,0 +1,35 @@
+#nexus
+
+BEGIN Taxa;
+DIMENSIONS ntax=6;
+TAXLABELS
+[1] 'CytB_C_aureus'
+[2] 'CytB_C_latrans'
+[3] 'CytB_C_rufus'
+[4] 'CytB_C_familiaris'
+[5] 'CytB_C_lupus'
+[6] 'CytB_V_vulpes'
+;
+END; [Taxa]
+
+BEGIN Splits;
+DIMENSIONS ntax=6 nsplits=14;
+FORMAT labels=no weights=yes confidences=no intervals=no;
+MATRIX
+	100	 1,
+	100	 2,
+	100	 3,
+	98	 2 3,
+	7	 1 2 3,
+	100	 4,
+	100	 5,
+	100	 4 5,
+	100	 6,
+	83	 1 6,
+	10	 1 4 5,
+	1	 3 6,
+	1	 2 6,
+	0	 1 5 6,
+;
+END; [Splits]
+
